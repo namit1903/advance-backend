@@ -2,7 +2,7 @@
   "name": "chai-backend",
   "version": "1.0.0",
   "description": "chai and code backend mega prject",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +13,9 @@
     "chai"
   ],
   "author": "Namit Thakur",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  }
 }
