@@ -4,13 +4,26 @@
 //  import {DB_NAME } from './constants';
 import express from "express";
 import connectDB from "./DB/index.js";
+import { app } from './app.js';
  
 
 dotenv.config({
   path:'./env'
 })
 
-connectDB(); 
+connectDB()//this is an async function so it will return a promise
+.then(()=>{
+  app.listen(process.env.PORT || 8000,()=>{
+    console.log(`Server is running at port:${process.env.PORT || 8000}`)
+  })
+  app.on("error",()=>{
+    console.log("This is the app.on() function attaches event handler to an event , here is Error:",error)
+    throw error
+  })
+})
+.catch((err)=>{
+  console.log("Error hai:"+err)
+})
 
 
 /*
