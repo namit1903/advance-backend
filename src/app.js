@@ -17,5 +17,10 @@ app.use(express.urlencoded({extended:true,limit:"16kb"}))
 //
 app.use(express.static("public"))
 //server is able to access the cookies in the client browser
-app.use(express.cookieParser())
+app.use(cookieParser())//---->error de rha hai 
+
+
+//import regiter user route
+import { userRouter } from './routes/user.route.js';
+app.use('api/v1/users',userRouter)
 export {app}
