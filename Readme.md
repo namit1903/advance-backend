@@ -1,2 +1,2 @@
 #chai and backend series
-This is the video series for Backend
+This is the video series for Backend basic learning
